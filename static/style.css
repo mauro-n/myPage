@@ -1,0 +1,330 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+CSS RESET END
+*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+hr {
+    border: 2px solid black;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-color: #b4d8fa;
+}
+
+
+#nav-bar {
+    display: none;
+    height: 35px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.37);
+    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.37);
+    align-items: center;
+}
+#nav-bar a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid rgba(0, 0, 0, 0.208);
+    font-size: 15px;
+}
+
+#main-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 2px;
+}
+#left-painel {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    text-align: center;
+}
+#right-painel {
+    border-left: 1px solid rgba(79, 162, 235, 50%);
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#banner {
+    display: flex;
+    padding: 5px;
+    width: 97%;
+    height: 400px;
+    justify-content: center;
+}
+#bannerImg{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    background-image: url('/static/images/entrepreneur.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#sideBanner {
+    display: none;
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+}
+
+#game {
+    margin-top: 10px;
+    height: 350px;
+    width: 320px;
+    align-self: center;
+}
+#mainH1 {
+    margin-top: 25%;
+}
+#mainH1 span:first-child {
+    margin: 10px 1px;
+}
+.presentation1 {
+    display: block;
+    margin: 15px 1px 15px 1px;
+    font-size: 40px;
+}
+.presentation2 {
+    font-size: 18px;
+    font-family: monospace;
+    letter-spacing: 1.5px;
+    margin: 5px 1px 5px 1px;
+}
+#buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 180px 1px 30px 1px;
+}
+#buttons-wrapper .buttons:last-child {
+    background-color: #3a86ff;
+    color: white;
+}
+#buttons-wrapper .buttons:last-child:hover {
+    color: #a9def9;
+    cursor: pointer;
+}
+.largeF {
+    font-size: 34px;
+}
+.aboutmeP {
+    margin: 15px 5px;
+    font-size: 17px;
+}
+#work-together {
+    margin: 10px 1px 10px 1px;
+    text-align: center;
+}
+#socials {
+    display: flex;
+    justify-content: center;
+}
+
+#socials a {
+    display: inline-block;
+    margin: 40px 10px 20px 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+#socials a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+    color: red;
+}
+.ulTitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ulTitle li:first-child {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: none;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: underline;
+}
+.ulTitle li:last-child, .ulTitle li:last-child a  {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+.ulTitle li {
+    display: inline-block;
+    margin: 10px;
+    padding: 2px;
+    background-color: #a9def9;
+    border: 1px solid black;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 16px;
+}
+.ulTitle li:last-child a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+    color: red;
+}
+
+#mfooter {
+    display: none;
+    height: 40px;
+    padding-top: 5px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+#mfooter a {
+    text-decoration: none;
+    color: white;
+}
+.titulos{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #050f14;
+}
+.buttons {
+    display: inline-block;
+    border: 1px solid #219ebc;
+    border-radius: 4px;
+    margin: 10px 4px;
+    width: 100px;
+    height: 60px;
+    padding: 4px;
+    font-size: 18px;
+}
+.buttons:hover {
+    background-color: #dee2e6;
+    cursor: pointer;
+}
+/* MEDIA QUERIES */
+@media (min-width: 900px){
+    #mfooter {
+        display: block;
+    }
+    #nav-bar {
+        display: flex;
+    }
+    #mainH1 {
+        margin-top: 5%;
+    }
+    #buttons-wrapper {
+    margin: 80px 1px 30px 1px;
+}
+    #main-page {
+        flex-direction: row;
+    }
+    #banner {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #bannerImg {
+        display: block;
+        width: 50%;
+    }
+    #sideBanner{
+        display: block;
+        width: 50%;
+    }
+    #game {
+        width: 481px;
+        height: 480px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+
+    #game {
+        width: 481px;
+        height: 480px;
+    }
+    #bannerImg{
+        width: 50%;
+    }
+    #sideBanner {
+        display: block;
+    }
+}
+
+@media (max-width: 768px){
+    #game {
+        width: 481px;
+        height: 480px;
+    }
+}
+
+@media (max-width: 480px){
+    #game {
+        width: 320px;
+        height: 360px;
+    }
+}
+
