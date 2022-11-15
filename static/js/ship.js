@@ -44,17 +44,12 @@ class Ship {
     };
 
     if (mouseX > 0 && mouseX < (game.clientWidth / 2)) {
-      if (width>400){
-        this.x -= 30;
-      }
-      this.x -= 10;
+
+      this.x -= 30;
       
     } else if (mouseX > (game.clientWidth / 2)
       && mouseX < game.clientWidth) {
-        if (width>400){
-          this.x += 30;
-        }
-      this.x += 10;
+      this.x += 30;
     };
   }
 }
