@@ -1,0 +1,3 @@
+CANVAS 101
+
+create canvas into the html with the tag canvas > it has an default bg of white
