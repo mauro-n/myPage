@@ -1,3 +1,37 @@
 CANVAS 101
 
 create canvas into the html with the tag canvas > it has an default bg of white
+
+fillStyle = define o estilo do preenchimento
+fillRect(x,y,w,h); creates an rectangle
+
+c.beginPatch(); isso aqui indica que voce vai por a "caneta no canvas"
+c.moveTo(x, y); define o ponto inicial
+c.lineTo(x,y); isso aqui faz uma linha do ponto inical ate o caminho especificado
+c.lineTo(x,y); define proximo ponto para a risca ir
+c.strokeStyle(); define estilos para riscar
+c.stroke(); pode riscar a tela
+
+c.beginPatch
+c.arc(); cria ellipses, arcos, circulos etc
+
+ANIMACOES
+
+function animate(){
+    requestAnimationFrame(animate);
+}
+
+c.clearRect(x,y,w,h); limpa o preenchimento, ou seja pode ser a tela inteira
+
+window.addEventListener('mousemove', function); adiciona uma funcao no movimento do mouse
+
+atraves do event arg podemos conseguir o x e y do mouse:
+
+indow.addEventListener('mousemove', function(event){
+    console.log(event)
+})
+
+create animation
+create function factory for canva
+add event on click
+add evente on resize
