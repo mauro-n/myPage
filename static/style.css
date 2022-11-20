@@ -50,8 +50,24 @@ table {
 /* 
 CSS RESET END
 */
+
+#game-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+
+#stage {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
 body{
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 hr {
     border: 2px solid black;
