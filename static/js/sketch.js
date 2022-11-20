@@ -4,12 +4,6 @@ let imgShip, imgGift, imgRocket, franchise, enemie;
 let skills = ['I LOVE', 'TO', 'CODE'];
 let enemyKilled = [];
 
-function preload(){
-  imgShip = loadImage('static/images/ship23x34.png');
-  imgGift = loadImage('static/images/gift.png');
-  imgRocket = loadImage('static/images/rocket.png');
-  franchise = loadFont('static/font/FranchiseFilled.ttf');
-}
 
 function setup() {
   var myCanvas = createCanvas(game.clientWidth, game.clientHeight);
@@ -27,11 +21,6 @@ function setup() {
     enemie.createNew(3);
     textSize(width/7);
   }
-
-  rectMode(CENTER);
-  imageMode(CENTER);
-
-  textAlign(CENTER, CENTER);
   textFont(franchise);
 }
 
