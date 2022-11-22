@@ -24,8 +24,8 @@ class Ship {
         this.position.x -= canvas.width / 7
     };
 
-    moveRight(canvas) {
-        if (this.position.x >= canvas.width - this.width - 10) {
+    moveRight() {
+        if (this.position.x > canvas.width - this.width - 10) {
             return this.position.x = 0;
         }
         this.position.x += canvas.width / 7
@@ -104,12 +104,24 @@ function addImg (icons){
 
 }
 
+//function for finding element position
+function findPos(obj){
+    var curleft = curtop = 0;
+    if (obj.offsetParent){
+        do {
+            curleft += obj.offsetLeft;
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    }
+    return [curleft, curtop];
+}
+
 //class Tomb
 class Tomb {
     constructor(img, position, w, h){
         this.img = img;
         this.position = position;
-        this.scaling = 2;
+        this.scaling = 1.25;
         this.width = w;
         this.height = h;
     }
@@ -118,8 +130,8 @@ class Tomb {
         if (!this.img){ return };
         if (this.img.length == 0){ return }
         ctx.drawImage(this.img,
-            this.position.x - this.width/2,
-            this.position.y - this.height/2,
+            this.position.x,
+            this.position.y,
             this.width * this.scaling,
             this.height* this.scaling);
     }
@@ -187,12 +199,16 @@ const deadEnemies = [];
 
 //setting up canvas
 let raf;
+
 const canvas = document.querySelector('#stage');
-//canvas.width = window.innerWidth;
-canvas.width = document.querySelector('body').clientWidth - 50;
-//canvas.height = window.innerHeight;
-canvas.height = document.querySelector('html').clientHeight - 50;
+canvas.width = document.querySelector('#stage').clientWidth;
+canvas.height = document.querySelector('#stage').clientHeight;
 const ctx = canvas.getContext('2d');
+
+const canvasX1 = findPos(canvas).shift()
+const canvasX2 = canvasX1 + canvas.width
+const halfCanvasX = canvasX1 + canvas.width/2;
+//console.log(canvasX1, canvasX2, halfCanvasX)
 
 //adding ship&&enemy
 const ship = new Ship;
@@ -201,8 +217,8 @@ enemy.populate(habilidades);
 
 //adding events
 canvas.addEventListener('click', (e) => {
-    if (e.clientX > canvas.width / 2) { ship.moveRight(canvas) }
-    if (e.clientX < canvas.width / 2) { ship.moveLeft(canvas) }
+    if (e.clientX > halfCanvasX) { ship.moveRight() }
+    if (e.clientX < halfCanvasX) { ship.moveLeft() }
     const bullet = new Bullet(ship.position)
     bullets.push(bullet);
 

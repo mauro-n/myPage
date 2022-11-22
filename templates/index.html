@@ -17,35 +17,36 @@
     <main id="wrapper">
         <nav id="nav-bar"><a href="">HOME</a></nav>
         <div id="main-page">
-            <div id="left-painel">
-                <section>
+            <div id="left-painel" class="">
+                <section id="presentation-section" class="section-medium">
                     <div id="presentation-wrapper">
-                        <h1 id="mainH1">
-                            <span class="presentation2">Hi! i'm</span>
-                            <span class="presentation1 titulos">Mauro Henrique</span>
-                            <span class="presentation2">Front-end Developer</span>
-                        </h1>
+                        <div class="subtitle1">Hi! i'm</div>
+                        <div class="presentation1 titulo1">Mauro Henrique</div>
+                        <div class="subtitle1">Front-end Developer</div>
                     </div>
                 </section>
-                <section>
+                <section id="button-section" class="section-medium center-v">
                     <div id="buttons-wrapper">
                         <button class="buttons">View Portfolio</button>
                         <button class="buttons">Download Resume</button>
                     </div>
                 </section>
                 <hr>
-                <section>
-                    <h2 class="titulos largeF">About me</h2>
-                    <p class="aboutmeP">Hello, i'm a front-end developer from Fortaleza, Brazil
+                <section id="about-section" class="section-small center-v">
+                    <h2 class="titulo2">About me</h2>
+                    <p class="subtitle2">Hello, i'm a front-end developer from Fortaleza, Brazil
                         currently studying System's Analysis and Development.
                     </p>
                 </section>
+                <button class="buttons self-center-h">
+                    <img src="" alt="Down">
+                </button>
             </div>
             <div id="right-painel">
-                <div id="banner">
+                <div id="banner-section" class="">
                     <span id="bannerImg"></span>
                     <span id="sideBanner">
-                        <ul class="titulos ulTitle">
+                        <ul class="titulo1 ulTitle">
                             <li>Technologies:</li>
                             <li>HTML</li>
                             <li>CSS</li>
@@ -59,21 +60,19 @@
                         </ul>
                     </span>
                 </div>
-                <hr>
                 <div id="game-wrapper">
                     <canvas id="stage"></canvas>
                 </div>
                 <hr>
-                <section>
-                    <h2 id="work-together" class="titulos largeF">Let's work together!</h2>
-                    <div id="socials">
-                        <a href="">linkedIn</a>
-                        <a href="">Github</a>
-                        <a href="">Email</a>
-                    </div>
-                </section>
-
             </div>
+            <section id="lets-work-together">
+                <h2 id="work-together" class="titulo1 largeF">Let's work together!</h2>
+                <div id="socials">
+                    <a href="">linkedIn</a>
+                    <a href="">Github</a>
+                    <a href="">Email</a>
+                </div>
+            </section>
         </div>
         <footer id="mfooter">
             <div>@ by Mauro Henrique</div>
@@ -88,4 +87,5 @@
 <script src="/static/js/sketch.js"></script>
 <script src="/static/js/ship.js"></script>
 -->
+
 </html>

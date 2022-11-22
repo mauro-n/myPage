@@ -51,19 +51,7 @@ table {
 CSS RESET END
 */
 
-#game-wrapper{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 10px;
-}
 
-#stage {
-    display: none;
-    margin: 0;
-    padding: 0;
-    border: 1px solid black;
-}
 body{
     font-family: 'Roboto', sans-serif;
     padding: 0;
@@ -94,6 +82,62 @@ hr {
     border-right: 1px solid rgba(0, 0, 0, 0.208);
     font-size: 15px;
 }
+.center-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.center-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.self-center-h {
+    align-self: center;
+}
+
+.titulo1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #050f14;
+    font-size: 49px;
+    margin: 15px;
+}
+.titulo2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #050f14;
+    font-size: 39px;
+    margin: 15px;
+}
+
+.subtitle1 {
+    font-size: 22px;
+    font-family: monospace;
+    letter-spacing: 1.5px;
+}
+.subtitle2 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.section-xlarge {
+    height: 800px;
+}
+.section-large {
+    height: 600px;
+}
+.section-medium {
+    height: 400px;
+}
+.section-small {
+    height: 200px;
+}
+.center-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #main-page {
     display: flex;
@@ -104,29 +148,31 @@ hr {
 }
 #left-painel {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     width: 100%;
     text-align: center;
 }
 #right-painel {
-    border-left: 1px solid rgba(79, 162, 235, 50%);
+    /* border-left: 1px solid rgba(79, 162, 235, 50%); */
     width: 100%;
     height: 800px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
 }
-#banner {
+#banner-section {
     display: flex;
+    flex-direction: column;
     padding: 5px;
-    width: 97%;
-    height: 400px;
+    width: 49%;
+    align-items: center;
     justify-content: center;
+
 }
+
 #bannerImg{
     display: block;
-    height: 100%;
+    height: 430px;
     width: 100%;
     border-radius: 6px;
     background-image: url('/static/images/entrepreneur.jpg');
@@ -135,39 +181,27 @@ hr {
     background-repeat: no-repeat;
 }
 #sideBanner {
-    display: none;
-    height: 100%;
-    width: 50%;
-    padding: 10px;
+    display: block;
 }
 
-#game {
-    margin-top: 10px;
-    height: 350px;
-    width: 320px;
-    align-self: center;
-}
-#mainH1 {
-    margin-top: 25%;
-}
-#mainH1 span:first-child {
-    margin: 10px 1px;
-}
-.presentation1 {
-    display: block;
-    margin: 15px 1px 15px 1px;
-    font-size: 40px;
-}
-.presentation2 {
-    font-size: 18px;
-    font-family: monospace;
-    letter-spacing: 1.5px;
-    margin: 5px 1px 5px 1px;
-}
-#buttons-wrapper {
+#game-wrapper{
     display: flex;
+    width: 49%;
+    height: 600px;
+}
+
+#stage {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.208);
+    width: 100%;
+    height: 100%;
+}
+
+#presentation-section {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 180px 1px 30px 1px;
+    /* align-items: center; */
 }
 #buttons-wrapper .buttons:last-child {
     background-color: #3a86ff;
@@ -176,13 +210,6 @@ hr {
 #buttons-wrapper .buttons:last-child:hover {
     color: #a9def9;
     cursor: pointer;
-}
-.largeF {
-    font-size: 34px;
-}
-.aboutmeP {
-    margin: 15px 5px;
-    font-size: 17px;
 }
 #work-together {
     margin: 10px 1px 10px 1px;
@@ -262,58 +289,43 @@ hr {
     text-decoration: none;
     color: white;
 }
-.titulos{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    color: #050f14;
-}
+
 .buttons {
     display: inline-block;
     border: 1px solid #219ebc;
     border-radius: 4px;
-    margin: 10px 4px;
     width: 100px;
     height: 60px;
     padding: 4px;
+    margin: 5px;
     font-size: 18px;
 }
 .buttons:hover {
     background-color: #dee2e6;
     cursor: pointer;
 }
+
+.border {
+    border: 1px solid red;
+}
 /* MEDIA QUERIES */
 @media (min-width: 900px){
+    #left-painel {
+        height: 800px;
+    }
+   /*  #rigth-painel {
+        flex-direction: row;
+        height: 800px;
+    } */
+
     #mfooter {
         display: block;
     }
     #nav-bar {
-        display: flex;
+        display: none;
     }
-    #mainH1 {
-        margin-top: 5%;
-    }
-    #buttons-wrapper {
-    margin: 80px 1px 30px 1px;
-}
     #main-page {
-        flex-direction: row;
-    }
-    #banner {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    #bannerImg {
-        display: block;
-        width: 50%;
-    }
-    #sideBanner{
-        display: block;
-        width: 50%;
-    }
-    #game {
-        width: 481px;
-        height: 480px;
+        flex-direction: column;
     }
 }
 @media (min-width: 769px) and (max-width: 1024px){
