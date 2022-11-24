@@ -397,7 +397,7 @@ body {
 .ul-container li {
     text-align: center;
     display: inline-block;
-    margin: 20px;
+    margin: 15px;
     outline: none;
     width: 100px;
     padding: 10px 0px;
@@ -536,7 +536,7 @@ body {
         height: 98vh;
     }
 
-    #rigth-painel {
+    #right-painel {
         height: 100vh;
     }
 }
