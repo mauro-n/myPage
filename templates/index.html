@@ -15,48 +15,47 @@
 
 <body>
     <main id="wrapper">
-        <nav id="nav-bar"><a href="">HOME</a></nav>
         <div id="main-page">
             <div id="left-painel" class="">
                 <section id="presentation-section" class="section-medium">
                     <div id="presentation-wrapper">
                         <div class="subtitle1">Hi! i'm</div>
-                        <div class="presentation1 titulo1">Mauro Henrique</div>
+                        <div class="titulo1">Mauro Henrique</div>
                         <div class="subtitle1">Front-end Developer</div>
                     </div>
                 </section>
-                <section id="button-section" class="section-medium center-v">
+                <section id="button-section" class=" center-v">
                     <div id="buttons-wrapper">
                         <button class="buttons">View Portfolio</button>
                         <button class="buttons">Download Resume</button>
                     </div>
                 </section>
-                <hr>
-                <section id="about-section" class="section-small center-v">
+          
+                <section id="about-section" class="section-medium center-v">
                     <h2 class="titulo2">About me</h2>
                     <p class="subtitle2">Hello, i'm a front-end developer from Fortaleza, Brazil
                         currently studying System's Analysis and Development.
                     </p>
                 </section>
-                <button class="buttons self-center-h">
-                    <img src="" alt="Down">
+                <button class="scroll-container">
+                    <div class="field">
+                        <div class="scroll"></div>
+                    </div>
                 </button>
             </div>
             <div id="right-painel">
                 <div id="banner-section" class="">
-                    <span id="bannerImg"></span>
+                    <div class="subtitle3">Overall View:</div>
+                    <img src="/static/images/eu-removebgComplete.png" id="bannerImg"></img>
                     <span id="sideBanner">
-                        <ul class="titulo1 ulTitle">
-                            <li>Technologies:</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
+                        <div class="subtitle3 text-center">Experience with:</div>
+                        <ul class="ul-container">
                             <li>JAVASCRIPT</li>
-                            <li>REACT</li>
+                            <li>PYTHON</li>
                             <li>NODE</li>
                             <li>EXPRESS</li>
-                            <li>PYTHON</li>
                             <li>DJANGO</li>
-                            <li><a href="">View projects</a></li>
+                            <li>MONGO DB</li>
                         </ul>
                     </span>
                 </div>
@@ -65,19 +64,22 @@
                 </div>
                 <hr>
             </div>
-            <section id="lets-work-together">
+            <section id="lets-work-together" class="section-medium">
                 <h2 id="work-together" class="titulo1 largeF">Let's work together!</h2>
-                <div id="socials">
-                    <a href="">linkedIn</a>
-                    <a href="">Github</a>
-                    <a href="">Email</a>
-                </div>
+                <ul class="wrapper">
+                    <li class="icon twitter">
+                        <span class="tooltip">LinkedIn</span>
+                        <span><i class="fab fa-twitter"></i></span>
+                        <img src="../static/images/linkedin-app-icon.png" class="icon" alt="">
+                    </li>
+                    <li class="icon github">
+                        <span class="tooltip">Github</span>
+                        <span><i class="fab fa-github"></i></span>
+                        <img src="../static/images/github-icon.png" class="icon" alt="">
+                    </li>
+                </ul>
             </section>
         </div>
-        <footer id="mfooter">
-            <div>@ by Mauro Henrique</div>
-            <div><a href="">About this page</a></div>
-        </footer>
     </main>
 </body>
 <script src="../static/js/main.js"></script>

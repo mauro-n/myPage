@@ -193,8 +193,7 @@ const bullets = [];
 const enemies = [];
 addImg(['django-logo-icon', 'express-js-icon', 
         'icons8-javascript-48',
-        'mongodb-icon', 'node-js-icon', 'python-icon',
-        'react-js-icon']);
+        'mongodb-icon', 'node-js-icon', 'python-icon']);
 const deadEnemies = [];
 
 //setting up canvas
