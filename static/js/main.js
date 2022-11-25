@@ -1,4 +1,30 @@
-window.onload = () => {
+//SCROLL BUTTON SCRIPT
+const scroll_btn = document.querySelector('#scroll-btn');
+const lPainel = document.querySelector('#left-painel');
+const scrollHeight = lPainel.clientHeight;
+
+scroll_btn.addEventListener('click', () => {
+    window.scroll({
+        top: scrollHeight + 20,
+        behavior: 'smooth'
+    });
+});
+// ************************
+
+const startGame = document.querySelector('#start-game');
+
+startGame.addEventListener('click', () => {
+    console.log('starting game');
+    setTimeout(() => {
+        gameStart();    
+    }, 500)
+    gameStart();
+    startGame.style.display = "none";
+})
+
+
+// GAME SCRIPT
+const gameStart = () => {
     //class ship
     class Ship {
         constructor() {
@@ -11,11 +37,14 @@ window.onload = () => {
             const scaling = 1.25;
             this.width = image.width * scaling;
             this.height = image.height * scaling;
+            
             this.position = {
                 x: canvas.width / 2 - this.width,
-                y: canvas.height - this.height * 2,
+                y: canvas.height - this.height * 3,
             }
             this.isShooting = true;
+            console.log(this.position)
+
         };
 
         moveLeft() {
@@ -33,7 +62,6 @@ window.onload = () => {
         }
 
         draw() {
-            ctx.fillRect(0, 0, canvas.width, canvas.height)
             if (!this.img) { return /* console.log('carregando ship.png...') */ };
             ctx.drawImage(
                 this.img,
@@ -41,6 +69,11 @@ window.onload = () => {
                 this.position.y,
                 this.width,
                 this.height)
+        }
+
+        setPOS(){
+            this.position.x = canvas.width / 2 - this.width;
+            this.position.y = canvas.height - this.height * 3;
         }
     }
 
@@ -202,8 +235,17 @@ window.onload = () => {
     let raf;
 
     const canvas = document.querySelector('#stage');
-    canvas.width = document.querySelector('#stage').clientWidth;
-    canvas.height = document.querySelector('#stage').clientHeight;
+
+    window.addEventListener('resize', () => {
+        window.location.reload();
+        canvas.width = document.querySelector('#stage').clientWidth;
+        canvas.height = document.querySelector('#stage').clientHeight;
+        ctx.reset()
+        animate()
+    })
+
+    canvas.width = document.querySelector('#game-wrapper').clientWidth;
+    canvas.height = document.querySelector('#game-wrapper').clientHeight;
     const ctx = canvas.getContext('2d');
 
     const canvasX1 = findPos(canvas).shift()
@@ -224,16 +266,8 @@ window.onload = () => {
         bullets.push(bullet);
     });
 
-    /* enemies.forEach(element => {
-        console.log(element.skill)
-    }) */
-
     function animate() {
-
-
-
-
-
+        console.log(canvas.width, canvas.height)
         function play() {
             ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -269,3 +303,5 @@ window.onload = () => {
     }
     animate()
 }
+
+//*************************
