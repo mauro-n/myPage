@@ -17,7 +17,7 @@ startGame.addEventListener('click', () => {
     console.log('starting game');
     setTimeout(() => {
         gameStart();    
-    }, 500)
+    }, 1000)
     gameStart();
     startGame.style.display = "none";
 })
@@ -43,7 +43,7 @@ const gameStart = () => {
                 y: canvas.height - this.height * 3,
             }
             this.isShooting = true;
-            console.log(this.position)
+            /* console.log(this.position) */
 
         };
 
@@ -238,14 +238,15 @@ const gameStart = () => {
 
     window.addEventListener('resize', () => {
         window.location.reload();
-        canvas.width = document.querySelector('#stage').clientWidth;
-        canvas.height = document.querySelector('#stage').clientHeight;
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
         ctx.reset()
         animate()
     })
 
     canvas.width = document.querySelector('#game-wrapper').clientWidth;
     canvas.height = document.querySelector('#game-wrapper').clientHeight;
+    canvas.style = "border: 1px solid rgba(0, 0, 0, 0.208);";
     const ctx = canvas.getContext('2d');
 
     const canvasX1 = findPos(canvas).shift()
@@ -267,7 +268,7 @@ const gameStart = () => {
     });
 
     function animate() {
-        console.log(canvas.width, canvas.height)
+        /* console.log(canvas.width, canvas.height) */
         function play() {
             ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
